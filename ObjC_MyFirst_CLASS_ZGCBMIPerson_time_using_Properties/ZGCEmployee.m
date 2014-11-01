@@ -13,7 +13,7 @@
 @interface ZGCEmployee()
 
 {
-    NSMutableSet *_assets; // hiding mutability by making this declaration private. this will force coder to use the addAsset: method to interact with the array which is only advertised as an NSArray in the declarations header
+    NSMutableSet *_assets; // hiding mutability by making this declaration private. this will force coder to use the addAsset: method to interact with the array which is only advertised as an NSArray in the declarations header // could also use a @property here...
 }
 
 @property (nonatomic) unsigned int officeAlarmCode; // making this private as it should be known to object only
