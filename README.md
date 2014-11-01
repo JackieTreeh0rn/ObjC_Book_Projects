@@ -1,4 +1,4 @@
 ObjC_Book_Projects
 ==================
 
-BNR Objective-C book Challenges
+BNR Objective-C book labs and challenges
