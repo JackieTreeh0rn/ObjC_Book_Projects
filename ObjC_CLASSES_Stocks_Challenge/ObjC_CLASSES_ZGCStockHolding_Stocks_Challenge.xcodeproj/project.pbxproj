@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2470AB719D4E22300685D50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2470AB619D4E22300685D50 /* Foundation.framework */; };
+		E2470ABA19D4E22300685D50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2470AB919D4E22300685D50 /* main.m */; };
+		E2470ABE19D4E22300685D50 /* ObjC_CLASSES_Stocks_Challenge.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2470ABD19D4E22300685D50 /* ObjC_CLASSES_Stocks_Challenge.1 */; };
+		E2470AC619D4EAB600685D50 /* ZGCStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = E2470AC519D4EAB600685D50 /* ZGCStockHolding.m */; };
+		E2951FCB19DCDD1B00066FBA /* ZGCForeignStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = E2951FCA19DCDD1B00066FBA /* ZGCForeignStockHolding.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2470AB119D4E22300685D50 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				E2470ABE19D4E22300685D50 /* ObjC_CLASSES_Stocks_Challenge.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E2470AB319D4E22300685D50 /* ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2470AB619D4E22300685D50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E2470AB919D4E22300685D50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E2470ABC19D4E22300685D50 /* ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge-Prefix.pch"; sourceTree = "<group>"; };
+		E2470ABD19D4E22300685D50 /* ObjC_CLASSES_Stocks_Challenge.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ObjC_CLASSES_Stocks_Challenge.1; sourceTree = "<group>"; };
+		E2470AC419D4EAB600685D50 /* ZGCStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCStockHolding.h; sourceTree = "<group>"; };
+		E2470AC519D4EAB600685D50 /* ZGCStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCStockHolding.m; sourceTree = "<group>"; };
+		E2951FC919DCDD1B00066FBA /* ZGCForeignStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCForeignStockHolding.h; sourceTree = "<group>"; };
+		E2951FCA19DCDD1B00066FBA /* ZGCForeignStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCForeignStockHolding.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2470AB019D4E22300685D50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2470AB719D4E22300685D50 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2470AAA19D4E22300685D50 = {
+			isa = PBXGroup;
+			children = (
+				E2470AB819D4E22300685D50 /* ObjC_CLASSES_Stocks_Challenge */,
+				E2470AB519D4E22300685D50 /* Frameworks */,
+				E2470AB419D4E22300685D50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2470AB419D4E22300685D50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2470AB319D4E22300685D50 /* ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2470AB519D4E22300685D50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2470AB619D4E22300685D50 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2470AB819D4E22300685D50 /* ObjC_CLASSES_Stocks_Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				E2951FC819DCDCC000066FBA /* CLASSES */,
+				E2470AB919D4E22300685D50 /* main.m */,
+				E2470ABD19D4E22300685D50 /* ObjC_CLASSES_Stocks_Challenge.1 */,
+				E2470ABB19D4E22300685D50 /* Supporting Files */,
+			);
+			path = ObjC_CLASSES_Stocks_Challenge;
+			sourceTree = "<group>";
+		};
+		E2470ABB19D4E22300685D50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2470ABC19D4E22300685D50 /* ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2951FC819DCDCC000066FBA /* CLASSES */ = {
+			isa = PBXGroup;
+			children = (
+				E2470AC419D4EAB600685D50 /* ZGCStockHolding.h */,
+				E2470AC519D4EAB600685D50 /* ZGCStockHolding.m */,
+				E2951FC919DCDD1B00066FBA /* ZGCForeignStockHolding.h */,
+				E2951FCA19DCDD1B00066FBA /* ZGCForeignStockHolding.m */,
+			);
+			name = CLASSES;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2470AB219D4E22300685D50 /* ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2470AC119D4E22300685D50 /* Build configuration list for PBXNativeTarget "ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge" */;
+			buildPhases = (
+				E2470AAF19D4E22300685D50 /* Sources */,
+				E2470AB019D4E22300685D50 /* Frameworks */,
+				E2470AB119D4E22300685D50 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge;
+			productName = ObjC_CLASSES_Stocks_Challenge;
+			productReference = E2470AB319D4E22300685D50 /* ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2470AAB19D4E22300685D50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Zerogravity;
+			};
+			buildConfigurationList = E2470AAE19D4E22300685D50 /* Build configuration list for PBXProject "ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E2470AAA19D4E22300685D50;
+			productRefGroup = E2470AB419D4E22300685D50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2470AB219D4E22300685D50 /* ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2470AAF19D4E22300685D50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2951FCB19DCDD1B00066FBA /* ZGCForeignStockHolding.m in Sources */,
+				E2470ABA19D4E22300685D50 /* main.m in Sources */,
+				E2470AC619D4EAB600685D50 /* ZGCStockHolding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E2470ABF19D4E22300685D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E2470AC019D4E22300685D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E2470AC219D4E22300685D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjC_CLASSES_Stocks_Challenge/ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge-Prefix.pch";
+				PRODUCT_NAME = ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge;
+			};
+			name = Debug;
+		};
+		E2470AC319D4E22300685D50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjC_CLASSES_Stocks_Challenge/ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge-Prefix.pch";
+				PRODUCT_NAME = ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2470AAE19D4E22300685D50 /* Build configuration list for PBXProject "ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2470ABF19D4E22300685D50 /* Debug */,
+				E2470AC019D4E22300685D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2470AC119D4E22300685D50 /* Build configuration list for PBXNativeTarget "ObjC_CLASSES_ZGCStockHolding_Stocks_Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2470AC219D4E22300685D50 /* Debug */,
+				E2470AC319D4E22300685D50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2470AAB19D4E22300685D50 /* Project object */;
+}
