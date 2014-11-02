@@ -10,7 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"\u03c0 is %f", M_PI); // example of constant π (Pi)
+        NSLog(@"\u03c0 is %f", M_PI); // example of constant π (Pi) #define constant
+        NSLog(@"%d is larger...", MAX(10, 12)); // example of "#define" constant (used as macro)
     }
     return 0;
 }
