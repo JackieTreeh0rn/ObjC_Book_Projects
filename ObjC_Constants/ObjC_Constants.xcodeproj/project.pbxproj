@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E2713D281A0550FA006F9AC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2713D271A0550FA006F9AC3 /* main.m */; };
+		E2DC73BA1A0F2DD800FF042A /* ZGCConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DC73B91A0F2DD800FF042A /* ZGCConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		E2713D241A0550FA006F9AC3 /* ObjC_Constants */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjC_Constants; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2713D271A0550FA006F9AC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2DC73B51A0F2D4900FF042A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E2DC73B81A0F2DD800FF042A /* ZGCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCConstants.h; sourceTree = "<group>"; };
+		E2DC73B91A0F2DD800FF042A /* ZGCConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,9 @@
 		E2713D1B1A0550FA006F9AC3 = {
 			isa = PBXGroup;
 			children = (
+				E2DC73B81A0F2DD800FF042A /* ZGCConstants.h */,
+				E2DC73B91A0F2DD800FF042A /* ZGCConstants.m */,
+				E2DC73B51A0F2D4900FF042A /* PrefixHeader.pch */,
 				E2713D261A0550FA006F9AC3 /* ObjC_Constants */,
 				E2713D251A0550FA006F9AC3 /* Products */,
 			);
@@ -118,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DC73BA1A0F2DD800FF042A /* ZGCConstants.m in Sources */,
 				E2713D281A0550FA006F9AC3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +240,7 @@
 				E2713D2D1A0550FA006F9AC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

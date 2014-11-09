@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZGCConstants.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -14,10 +15,16 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%d is larger...", MAX(10, 12)); // example of "#define" constant (used as macro - ie. work as a function)
         
         NSLocale *here = [NSLocale currentLocale];
-        NSString *currency = [here objectForKey:@"currency"]; // global variables are always prefered.  NSLocaleCurrencyCode is a global variable (prefered to using @"currency")
+        NSString *currency = [here objectForKey:NSLocaleCurrencyCode]; // global variables are always prefered.  NSLocaleCurrencyCode is a global variable (prefered to using @"currency")
         NSLog(@"Money is %@", currency);
         
+        ZGCConstants *constants = [[ZGCConstants alloc] init];
+        [constants setSpeed:crush];
+        NSLog(@"%d", [constants getSpeed]);
+        NSLog(@"%@", ZGCBlenderName);
         
+        NSLog(@"%@", NSLocaleCurrencyCode);
+       
         
         
         
