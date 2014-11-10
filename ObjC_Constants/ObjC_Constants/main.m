@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Money is %@", currency);
         
         ZGCConstants *constants = [[ZGCConstants alloc] init];
-        [constants setSpeed:crush];
+        [constants setSpeed:ZGCfrapee];
         NSLog(@"%d", [constants getSpeed]);
         NSLog(@"%@", ZGCBlenderName);
         
