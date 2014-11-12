@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
         
         
         // Writing File  AND passing the NSError pointer by reference to the NSString method
-        BOOL success = [str writeToFile:@"/tmp/coolzz.txt" //file paths can be absolute or relative. almost usually you will use absolute path.
+        BOOL success = [str writeToFile:@"/tmp/cool.txt" //file paths can be absolute or relative. almost usually you will use absolute path.
                             atomically:YES
                               encoding:NSUTF8StringEncoding
                                  error:&error];  //reference to the pointer (you pass a reference because there is no object yet to pass). error: could also be set to NULL if not interested in error.  You are basically passing an address where it can put a pointer to an instance of NSError
@@ -52,13 +52,16 @@ int main(int argc, const char * argv[]) {
             NSLog(@"resolv.conf looks like this: %@", str2);
         }
         
-        /* WRITING AN NSData Object to a file */
         
-
+        /* FINDING SPECIAL DIRECTORIES */
+        /* apple has created a function that will tell you the right directories for the appropiate purpose */
         
+        // in this case, the function returns an array of paths for the users "desktop"
+        NSArray *desktops = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES); //use reference for these constants...
         
-        
-        
+        // But I know the user has exactly one desktop directory
+        NSString *desktopPath = desktops[0];
+        NSLog(@"%@", desktopPath); // other directory constants: NSApplicationDirectory, NSLibraryDirectory, NSCachesDirectory, NSMusicDirectory, NSTrashDirectory, etc)
     }
     return 0;
 }
