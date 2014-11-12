@@ -16,14 +16,15 @@ int main(int argc, const char * argv[]) {
         
         NSLocale *here = [NSLocale currentLocale];
         NSString *currency = [here objectForKey:NSLocaleCurrencyCode]; // global variables are always prefered.  NSLocaleCurrencyCode is a global variable (prefered to using @"currency")
+        NSLog(@"%@", NSLocaleCurrencyCode); //example of a foundation constant (equals to "currency")
         NSLog(@"Money is %@", currency);
         
         ZGCConstants *constants = [[ZGCConstants alloc] init];
-        [constants setSpeed:ZGCfrapee];
+        [constants setSpeed:ZGCicy];
         NSLog(@"%d", [constants getSpeed]);
-        NSLog(@"%@", ZGCBlenderName);
+        NSLog(@"%@", ZGCBlenderName); // gets value of a constant
         
-        NSLog(@"%@", NSLocaleCurrencyCode);
+
        
         
         

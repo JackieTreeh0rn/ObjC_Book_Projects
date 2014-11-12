@@ -11,6 +11,7 @@
 // Constants can be set with #define (eg. #define M_PI = 3.14159xxxxx) or as Global variableds with ENUM or 'const'. global var. is prefered.
 // using enum to declare constants - NS_ENUM is new foundation framework approach to ENUM.  NS_ENUM main adv. lets you specify type (int, char, long, double, etyc)//
 typedef NS_ENUM(char, blenderSpeed){
+    ZGCOFF, // first constant gets 0 assigned in the index so that would  be null value.
     ZGCfrapee,
     ZGCcrush,
     ZGCblendd,

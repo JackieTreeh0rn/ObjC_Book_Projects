@@ -8,7 +8,7 @@
 
 #import "ZGCConstants.h"
 
-NSString * const ZGCBlenderName = @"My Blender";
+NSString * const ZGCBlenderName = @"My Blender"; // implementing constant
 
 @implementation ZGCConstants
 
