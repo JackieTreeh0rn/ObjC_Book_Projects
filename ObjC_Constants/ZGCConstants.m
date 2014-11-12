@@ -13,12 +13,12 @@ NSString * const ZGCBlenderName = @"My Blender"; // implementing constant
 @implementation ZGCConstants
 
 
-- (void)setSpeed:(blenderSpeed)x
+- (void)setSpeed:(blenderSpeed)x // this is all you need to set the constant after enum
 {
     speed = x;
 }
 
-- (blenderSpeed)getSpeed;
+- (blenderSpeed)getSpeed; // optional, added method to get speed.
 {
     return speed;
 }
