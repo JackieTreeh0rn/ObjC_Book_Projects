@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
         
         if (!data) {
             NSLog(@"fetch failed: %@", [error localizedDescription]);
+            return 1; // returns 1 ends main
         }
         
         NSLog(@"The file is %lu bytes", (unsigned long)[data length]);
@@ -32,7 +33,7 @@ int main(int argc, const char * argv[]) {
         
         if (!written) {
             NSLog(@"write failed: %@", [error localizedDescription]);
-            return 1;
+            return 1; //returns 1, ends main.
         }
         
         NSLog(@"Write Success!");
@@ -42,5 +43,5 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The file read from the disk has %lu bytes", (unsigned long)[readData length]);
         
     }
-    return 0;
+    return 0; //returns 0 - WIN!
 }
