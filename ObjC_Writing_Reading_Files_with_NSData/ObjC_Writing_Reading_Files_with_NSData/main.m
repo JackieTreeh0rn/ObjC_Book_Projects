@@ -22,7 +22,6 @@ int main(int argc, const char * argv[]) {
         
         if (!data) {
             NSLog(@"fetch failed: %@", [error localizedDescription]);
-            return 1;
         }
         
         NSLog(@"The file is %lu bytes", (unsigned long)[data length]);
