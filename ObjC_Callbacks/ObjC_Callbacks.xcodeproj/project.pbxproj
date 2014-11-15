@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E2EFD17F1A16E0180046C87C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EFD17E1A16E0180046C87C /* main.m */; };
+		E2EFD1871A16FE3B0046C87C /* ZGCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EFD1861A16FE3B0046C87C /* ZGCLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		E2EFD17B1A16E0180046C87C /* ObjC_Callbacks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjC_Callbacks; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EFD17E1A16E0180046C87C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2EFD1851A16FE3B0046C87C /* ZGCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCLogger.h; sourceTree = "<group>"; };
+		E2EFD1861A16FE3B0046C87C /* ZGCLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCLogger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +60,19 @@
 		E2EFD17D1A16E0180046C87C /* ObjC_Callbacks */ = {
 			isa = PBXGroup;
 			children = (
+				E2EFD1881A16FE790046C87C /* Classes */,
 				E2EFD17E1A16E0180046C87C /* main.m */,
 			);
 			path = ObjC_Callbacks;
+			sourceTree = "<group>";
+		};
+		E2EFD1881A16FE790046C87C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E2EFD1851A16FE3B0046C87C /* ZGCLogger.h */,
+				E2EFD1861A16FE3B0046C87C /* ZGCLogger.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EFD1871A16FE3B0046C87C /* ZGCLogger.m in Sources */,
 				E2EFD17F1A16E0180046C87C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +246,7 @@
 				E2EFD1841A16E0180046C87C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
