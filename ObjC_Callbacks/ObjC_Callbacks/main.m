@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
         
         ZGCLogger *logger = [[ZGCLogger alloc] init];
         
-        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0
+        __unused NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0
                                                           target:logger
                                                         selector:@selector(updateLastTime:)
                                                         userInfo:nil
