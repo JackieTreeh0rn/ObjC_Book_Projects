@@ -12,7 +12,7 @@
 
 - (NSString *)lastTimeString
 {
-    static NSDateFormatter *dateFormatter = nil;
+    static NSDateFormatter *dateFormatter = nil; //static variable (every
     if (!dateFormatter) {
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
