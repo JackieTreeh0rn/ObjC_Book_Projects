@@ -12,12 +12,12 @@
 
 - (NSString *)lastTimeString
 {
-    static NSDateFormatter *dateFormatter = nil; //static variable (every
+    static NSDateFormatter *dateFormatter = nil; //static variable (sticks around so only one instance of NSDateFormatter is used for the entire process)
     if (!dateFormatter) {
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-        NSLog(@"created dateFormatter");
+        NSLog(@"created dateFormatter"); //this technically should only happen once and the global variable sticks around for the entire duration. A static variable, whether declared inside a function or outside, is initialized only once with the value provided on the declaration line.
     }
     return [dateFormatter stringFromDate:self.lastTime];
 }
