@@ -10,6 +10,8 @@
 
 @implementation ZGCLogger
 
+// ----------- TARGET-ACTION METHODS -----------------
+
 - (NSString *)lastTimeString
 {
     static NSDateFormatter *dateFormatter = nil; //static variable (sticks around so only one instance of NSDateFormatter is used for the entire process)
@@ -28,5 +30,44 @@
     [self setLastTime:now];
     NSLog(@"Just set time to %@", self.lastTimeString);
 }
+
+// --------------------------------------------------
+
+
+// ----------HELPER-OBJECT METHODS ------------------
+
+/* called each time a chunk of data arrives */
+ - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    NSLog(@"received %lu bytes", [data length]);
+    
+    // create a mutable data if it does not already exist
+    if (!_incomingData) {
+        _incomingData = [[NSMutableData alloc] init];
+    }
+    
+    [_incomingData appendData:data];
+}
+
+/* called when the last chunk has been processed */
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSLog(@"Got it all!");
+    NSString *string = [[NSString alloc] initWithData:_incomingData encoding:NSUTF8StringEncoding];
+    _incomingData = nil;
+
+    NSLog(@"string has %lu characters", [string length]);
+    
+    // Uncomment to see the entire fetched file
+    NSLog(@"The whole string is %@", string);
+}
+
+/* Called of the fetch fails */
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"connection failed: %@", [error localizedDescription]);
+}
+
+
 
 @end
