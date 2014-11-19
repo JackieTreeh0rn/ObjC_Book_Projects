@@ -6,6 +6,12 @@
 //  Copyright (c) 2014 Zerogravity. All rights reserved.
 //
 
+/*
+  ZGCLogger is a class spawning an object that serves as a target, delegate, and
+  observer object for this callbacks / event driven application
+*/
+
+
 #import <Foundation/Foundation.h>
 
 @interface ZGCLogger : NSObject
@@ -26,6 +32,10 @@
 // HELPER OBJECT callback methods //
 /* using PROTOCOLS in this case (a protocol is a list of method declarations) prearranged set of msgs an obj can send to helper
     they are protocols for NSURLConnection so they are already declared - no need to declare them */
+
+
+// NOTIFICATION callback method //
+- (void)zoneChange:(NSNotification *)note;
 
 
 @end

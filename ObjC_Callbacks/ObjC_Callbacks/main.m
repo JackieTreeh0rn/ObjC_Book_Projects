@@ -20,14 +20,14 @@ int main(int argc, const char * argv[]) {
         ZGCLogger *logger = [[ZGCLogger alloc] init]; //object we are using for the callbacks
         
         
-        /// ++TARGET-ACTION CALL BACK++ (using a Timer object in this example) ///
+        /// ++ TARGET-ACTION CALL BACK ++ (using a Timer object in this example) ///
         __unused NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0   // __unused supreses error about 'unused variable (timer)
                                                                    target:logger //target is the instance of ZGCLogger object in this case
                                                                  selector:@selector(updateLastTime:) // action is the selector (the callback method)
                                                                  userInfo:nil
                                                                   repeats:YES];
         
-        /// ++HELPER OBJECT CALL BACK++  aka 'delegates' (using NSURLConnection in this example ///
+        /// ++ HELPER OBJECT CALL BACK ++  aka 'delegates/data sources' (using NSURLConnection in this example) ///
         NSURL *url = [NSURL URLWithString:@"http://www.gutenberg.org/cache/epub/205/pg205.txt"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         __unused NSURLConnection *fetchConn = [[NSURLConnection alloc] initWithRequest:request
@@ -35,7 +35,11 @@ int main(int argc, const char * argv[]) {
                                                                       startImmediately:YES];
         
         
-        
+        /// ++ NOTIFICATION CENTER CALL BACK ++ (using timezone change notification in this example)
+        [[NSNotificationCenter defaultCenter] addObserver:logger // logger again is the object acting as observer
+                                                 selector:@selector(zoneChange:) // method to invoke on observer
+                                                     name:NSSystemTimeZoneDidChangeNotification // type of notificaiton to listen for
+                                                   object:nil];
         
         
         /*  event driven programs use an object which sits listetning for events (NSRunLoop). it is always running until

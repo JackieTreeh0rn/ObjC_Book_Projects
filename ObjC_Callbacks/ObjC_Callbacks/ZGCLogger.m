@@ -30,7 +30,7 @@
     [self setLastTime:now];
     NSLog(@"Just set time to %@", self.lastTimeString);
 }
-
+
 // --------------------------------------------------
 
 
@@ -54,8 +54,8 @@
 {
     NSLog(@"Got it all!");
     NSString *string = [[NSString alloc] initWithData:_incomingData encoding:NSUTF8StringEncoding];
-    _incomingData = nil;
-
+    _incomingData = nil;
+    
     NSLog(@"string has %lu characters", [string length]);
     
     // Uncomment to see the entire fetched file
@@ -68,6 +68,19 @@
     NSLog(@"connection failed: %@", [error localizedDescription]);
 }
 
+// just adding this protocol method to see what it returns
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSLog(@"Did get a response from %@", response.URL);
+}
+// ------------------------------------------------------
+
+
+// ------- NOTIFICATIONS METHOD -------------------------
+- (void)zoneChange:(NSNotification *)note
+{
+    NSLog(@"Time zone has been changed to %@", [NSTimeZone systemTimeZone]); //pulling local system timzone for this output
+}
 
 
 @end
