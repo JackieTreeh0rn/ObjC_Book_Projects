@@ -40,6 +40,7 @@ int main(int argc, const char * argv[]) {
                                                  selector:@selector(zoneChange:) // method to invoke on observer
                                                      name:NSSystemTimeZoneDidChangeNotification // type of notificaiton to listen for
                                                    object:nil];
+        NSLog(@"%@", [NSTimeZone systemTimeZone]);
         
         
         /*  event driven programs use an object which sits listetning for events (NSRunLoop). it is always running until
