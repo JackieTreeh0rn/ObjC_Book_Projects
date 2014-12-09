@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Zerogravity. All rights reserved.
 //
 
-///// CALLBACKS /////
+///// CALLBACKS /////     * CALLBACKS ALLOW OTHER OBJECTS TO CALL METHODS IN YOUR OBJECTS IN RESPONSE TO EVENTS *
 /* A callback lets you write a piece of code and then associate that
  code with a particular event (such as a button press, a time elapses, memory is low, system connects to network etc.
  When the event happens, your code is executed */
