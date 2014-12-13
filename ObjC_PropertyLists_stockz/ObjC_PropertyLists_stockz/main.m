@@ -8,29 +8,31 @@
 
 #import <Foundation/Foundation.h>
 
-/// *** PROPERTY LISTS ****
+/// *** PROPERTY LISTS **** ///
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         // BUILDING A PROPERTY LIST using dictionaries //
-        NSMutableArray *stockz = [[NSMutableArray alloc] init];
+        NSMutableArray *stockz = [[NSMutableArray alloc] init]; // build array container to hold it all
+        
         NSMutableDictionary *stock;
         
-        stock = [NSMutableDictionary dictionary]; // dictionary 1
-        [stock setObject:@"AAPL"
+        stock = [NSMutableDictionary dictionary]; // build dictionary 0
+        [stock setObject:@"AAPL"                  // key-value pairs
                   forKey:@"symbol"];
         [stock setObject:[NSNumber numberWithInt:200]
                   forKey:@"shares"];
         
-        [stockz addObject:stock];
+        [stockz addObject:stock]; // add dictionary 0 to array
         
-        stock = [NSMutableDictionary dictionary]; // dictionary 2
-        [stock setObject:@"GOOG"
+        stock = [NSMutableDictionary dictionary]; // build dictionary 1
+        [stock setObject:@"GOOG"                  //key-value pairs
                   forKey:@"symbol"];
         [stock setObject:[NSNumber numberWithInt:160]
                   forKey:@"shares"];
         
-        [stockz addObject:stock];
+        [stockz addObject:stock];  // add dictionary 1 to array
         
         [stockz writeToFile:@"/tmp/stockz.plist"
                  atomically:YES];
