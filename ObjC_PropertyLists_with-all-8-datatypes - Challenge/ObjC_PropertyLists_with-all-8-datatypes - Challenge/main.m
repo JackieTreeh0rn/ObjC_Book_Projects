@@ -65,15 +65,39 @@ int main(int argc, const char * argv[]) {
         }
         // READ Plist
         NSArray *inputPlist = [NSArray arrayWithContentsOfFile:@"/tmp/aPropertyList.plist"];
+        NSLog(@"%@", inputPlist);
+        
        // NSData *inputDataPlist = [NSPropertyListSerialization dataWithPropertyList:@"/tmp/aPropertyList.plist" format:NSPropertyListXMLFormat_v1_0 options:0 error:nil];
             for (NSNumber *a in inputPlist) {
-                NSLog(@"%@", a);
+                if (a.integerValue) {
+                    NSLog(@"Here's are some integers: %ld", a.integerValue);
+                }
+                
+                if (a.floatValue) {
+                    NSLog(@"Here are some floats: %f", a.floatValue);
+                }
+                
+                if (a.boolValue) {
+                    NSLog(@"Here is a BOOL: %hhd", a.boolValue);
+                }
+                
+            for (NSString *s in inputPlist) {
+                    NSLog(@"Here are some strings: %@", s);
+                }
+                
+            for (NSMutableArray *a in inputPlist) {
+                    NSLog(@"Here are some arrays: %@", a);
+                }
+                
+            for (NSArray *a in inputPlist) {
+                    NSLog(@"Here's an array: %@", a);
+                }
 
             }
-
         
-            }
+        
     
     
+    }
     return 0;
 }
