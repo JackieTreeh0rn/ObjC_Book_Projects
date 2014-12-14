@@ -18,51 +18,62 @@ int main(int argc, const char * argv[]) {
         //NSMutableArray *mainArray = [NSMutableArray alloc];
 
         // an Array
-        NSArray *stringArray = @[@"string1", @"string2", @"string3"];
+        NSArray *anArray = @[@"string1", @"string2", @"string3"];
         
         // a Dictionary (literal) with various object types
-        NSDictionary *dictionary = @{ @"aFloat" : @1.2,
+        NSDictionary *aDictionary = @{ @"aFloat" : @1.2,
                                       @"anInteger1" : [NSNumber numberWithInt:122],
                                       @"anInteger2" : @65,
                                       @"aString" : @"Hello World",
-                                      @"anArray" : @[@"Hola", @"Mundo"],
+                                      @"anArray" : @[@"Yellow", @"Red", @"Blue"],
                                       };
         // NSLog(@"%@", dictionary[@"anArray"]);
         
         // a String
-        NSString *myString = @"This is a String";
+        NSString *aString = @"This is a String";
         
         // a Date
-        NSDate *nowDate = [NSDate date];
+        NSDate *aDate = [NSDate date];
         
         // an Integer
         NSNumber *anInt = @10;
+        
         // a Float
         NSNumber *aFloat = [NSNumber numberWithFloat:3.1345];
         
         //a BOOLean
-        BOOL aBool;
-        // NSLog(@"%d", isOK); // is 1
+        NSNumber *aBool = [NSNumber numberWithBool:YES];
         
         // an NSData
         NSData *aData = [NSData dataWithContentsOfFile:@"/tmp/nsdatadummy.log"];
         
+        // an NSString
+        NSString *aStringFromData = [[NSString alloc] initWithData:aData encoding:NSUTF8StringEncoding]; // string with data (used to display nsdata as string instead of hex)
         
-        // ADD all objects TO array container
-        NSMutableArray *mainArray = [[NSMutableArray alloc] initWithObjects:stringArray, dictionary, myString, nowDate, anInt, aFloat, aBool, aData, nil];
+        
+        // ADD ALL objects TO array container
+        NSMutableArray *mainArray = [[NSMutableArray alloc] initWithObjects:anArray, aDictionary, aString, aDate, anInt, aFloat, aBool, aData, aStringFromData, nil];
+        
         
         // WRITE array container to plist
-        [mainArray writeToFile:@"/tmp/aPropertyList.plist"
+        BOOL written = [mainArray writeToFile:@"/tmp/aPropertyList.plist"  // using BOOL here for illustration but could just do a mainarray write
                     atomically:YES];
         
+        if (!written) {
+            NSLog(@"Plist not written, exiting..");
+            return 1;
+        }
+        // READ Plist
+        NSArray *inputPlist = [NSArray arrayWithContentsOfFile:@"/tmp/aPropertyList.plist"];
+       // NSData *inputDataPlist = [NSPropertyListSerialization dataWithPropertyList:@"/tmp/aPropertyList.plist" format:NSPropertyListXMLFormat_v1_0 options:0 error:nil];
+            for (NSNumber *a in inputPlist) {
+                NSLog(@"%@", a);
+
+            }
+
         
-        
-        
-        
-        
-        
-        
-        
-    }
+            }
+    
+    
     return 0;
 }
