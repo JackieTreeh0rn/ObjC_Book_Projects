@@ -22,10 +22,10 @@ int main(int argc, const char * argv[]) {
         
         // a Dictionary (literal) with various object types
         NSDictionary *aDictionary = @{ @"aFloat" : @1.2,
-                                      @"anInteger1" : [NSNumber numberWithInt:122],
-                                      @"anInteger2" : @65,
-                                      @"aString" : @"Hello World",
-                                      @"anArray" : @[@"Yellow", @"Red", @"Blue"],
+                                       @"anInteger1" : [NSNumber numberWithInt:122],
+                                       @"anInteger2" : @65,
+                                       @"aString" : @"Hello World",
+                                       @"anArray" : @[@"Yellow", @"Red", @"Blue"],
                                       };
         // NSLog(@"%@", dictionary[@"anArray"]);
         
@@ -68,7 +68,8 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@", inputPlist);
         
        // NSData *inputDataPlist = [NSPropertyListSerialization dataWithPropertyList:@"/tmp/aPropertyList.plist" format:NSPropertyListXMLFormat_v1_0 options:0 error:nil];
-            for (NSNumber *a in inputPlist) {
+       // NSArray *input = [NSKeyedUnarchiver unarchiveObjectWithData:inputDataPlist];
+       /*     for (NSNumber *a in inputPlist) {
                 if (a.integerValue) {
                     NSLog(@"Here's are some integers: %ld", a.integerValue);
                 }
@@ -93,7 +94,7 @@ int main(int argc, const char * argv[]) {
                     NSLog(@"Here's an array: %@", a);
                 }
 
-            }
+            } */
         
         
     
