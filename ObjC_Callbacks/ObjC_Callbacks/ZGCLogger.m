@@ -53,7 +53,8 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSLog(@"Got it all!");
-    NSString *string = [[NSString alloc] initWithData:_incomingData encoding:NSUTF8StringEncoding];
+    NSString *string = [[NSString alloc] initWithData:_incomingData
+                                             encoding:NSUTF8StringEncoding];
     _incomingData = nil;
     
     NSLog(@"string has %lu characters", [string length]);

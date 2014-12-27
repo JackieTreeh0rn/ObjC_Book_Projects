@@ -14,8 +14,6 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        // BUILD a container aray to house the various objects
-        //NSMutableArray *mainArray = [NSMutableArray alloc];
 
         // an Array
         NSArray *anArray = @[@"string1", @"string2", @"string3"];
