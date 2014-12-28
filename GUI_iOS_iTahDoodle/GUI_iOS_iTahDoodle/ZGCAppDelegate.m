@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Zerogravity. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "ZGCAppDelegate.h"
 
-@interface AppDelegate ()
+@interface ZGCAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation ZGCAppDelegate
 
 #pragma mark - Application delegate callbacks
 

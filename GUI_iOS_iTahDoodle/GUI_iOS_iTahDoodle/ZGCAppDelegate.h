@@ -8,14 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface ZGCAppDelegate : UIResponder <UIApplicationDelegate>
 
+#pragma mark - UI properties
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) UITableView *taskTable;
 @property (nonatomic) UITextField *taskField;
 @property (nonatomic) UIButton *insertButton;
 @property (nonatomic) NSMutableArray *tasks;
 
+#pragma mark - UI method
 - (void)addTask:(id)sender;
 
 

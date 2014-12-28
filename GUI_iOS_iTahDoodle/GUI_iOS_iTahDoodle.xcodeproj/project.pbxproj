@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E2756C8A1A4E886000E98AC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2756C891A4E886000E98AC2 /* main.m */; };
-		E2756C8D1A4E886000E98AC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2756C8C1A4E886000E98AC2 /* AppDelegate.m */; };
+		E2756C8D1A4E886000E98AC2 /* ZGCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2756C8C1A4E886000E98AC2 /* ZGCAppDelegate.m */; };
 		E2756C8F1A4E886000E98AC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2756C8E1A4E886000E98AC2 /* Images.xcassets */; };
 		E2756C921A4E886000E98AC2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2756C901A4E886000E98AC2 /* LaunchScreen.xib */; };
 		E2756C9E1A4E886000E98AC2 /* GUI_iOS_iTahDoodleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2756C9D1A4E886000E98AC2 /* GUI_iOS_iTahDoodleTests.m */; };
@@ -28,8 +28,8 @@
 		E2756C841A4E886000E98AC2 /* GUI_iOS_iTahDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUI_iOS_iTahDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2756C881A4E886000E98AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2756C891A4E886000E98AC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E2756C8B1A4E886000E98AC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E2756C8C1A4E886000E98AC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2756C8B1A4E886000E98AC2 /* ZGCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGCAppDelegate.h; sourceTree = "<group>"; };
+		E2756C8C1A4E886000E98AC2 /* ZGCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGCAppDelegate.m; sourceTree = "<group>"; };
 		E2756C8E1A4E886000E98AC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E2756C911A4E886000E98AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E2756C971A4E886000E98AC2 /* GUI_iOS_iTahDoodleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GUI_iOS_iTahDoodleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,8 +76,8 @@
 		E2756C861A4E886000E98AC2 /* GUI_iOS_iTahDoodle */ = {
 			isa = PBXGroup;
 			children = (
-				E2756C8B1A4E886000E98AC2 /* AppDelegate.h */,
-				E2756C8C1A4E886000E98AC2 /* AppDelegate.m */,
+				E2756C8B1A4E886000E98AC2 /* ZGCAppDelegate.h */,
+				E2756C8C1A4E886000E98AC2 /* ZGCAppDelegate.m */,
 				E2756C8E1A4E886000E98AC2 /* Images.xcassets */,
 				E2756C901A4E886000E98AC2 /* LaunchScreen.xib */,
 				E2756C871A4E886000E98AC2 /* Supporting Files */,
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2756C8D1A4E886000E98AC2 /* AppDelegate.m in Sources */,
+				E2756C8D1A4E886000E98AC2 /* ZGCAppDelegate.m in Sources */,
 				E2756C8A1A4E886000E98AC2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +396,7 @@
 				E2756CA31A4E886000E98AC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2756CA41A4E886000E98AC2 /* Build configuration list for PBXNativeTarget "GUI_iOS_iTahDoodleTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +405,7 @@
 				E2756CA61A4E886000E98AC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
