@@ -40,11 +40,13 @@
     self.taskTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
     self.taskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    // Make the ZGCAppDelegate the TableView's datasource (it must conform to the datasource protocol (has two required methods))
-    self.taskTable.dataSource = self
     
     // Tell the table view which class to instantiate whenever it needs to create a new cell
     [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+    
+    // Make the ZGCAppDelegate the TableView's datasource (it must conform to the datasource protocol (has two required methods))
+    self.taskTable.dataSource = self;
     
     
     // Create and configure the UITextField instance where new tasks will be entered
@@ -121,9 +123,11 @@
     }
     // Add it to the working array
     [self.tasks addObject:text];
-    
     // Log text to console (for logging purposes)
     NSLog(@"Task entered: %@", text);
+    
+    // Refresh the table so that the new item shows up
+    [self.taskTable reloadData];
     
     
     // Clear out the text field
@@ -156,6 +160,11 @@
     // ...and hand the property configured cell back to the table view
     return c;
     
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // test // not ready for this yet // // adds a delete button with swipe...
+
 }
 
 @end
