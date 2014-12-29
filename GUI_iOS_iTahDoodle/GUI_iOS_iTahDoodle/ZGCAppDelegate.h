@@ -10,14 +10,16 @@
 
 @interface ZGCAppDelegate : UIResponder <UIApplicationDelegate>
 
-#pragma mark - UI properties
+#pragma mark - UI properties / objects
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic) UITableView *taskTable;
 @property (nonatomic) UITextField *taskField;
 @property (nonatomic) UIButton *insertButton;
+
+#pragma mark - Model properties / objects
 @property (nonatomic) NSMutableArray *tasks;
 
-#pragma mark - UI method
+#pragma mark -  method
 - (void)addTask:(id)sender;
 
 

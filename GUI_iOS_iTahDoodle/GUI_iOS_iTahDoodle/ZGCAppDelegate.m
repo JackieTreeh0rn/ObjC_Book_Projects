@@ -18,11 +18,58 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Create and configure the UIWindow instance
+    // A CGRect is a struct with an origin (x,y) and a size (width, height)
+    CGRect winFrame = [[UIScreen mainScreen] bounds];
+    UIWindow *theWindow = [[UIWindow alloc] initWithFrame:winFrame];
+    self.window = theWindow;
+    
+    
+    // Define the frame rectangles of the three UI elements
+    // CGRectMake() creates a CGRect from (x, y, width, height)
+    CGRect tableFrame = CGRectMake(0, 80, winFrame.size.width, winFrame.size.height - 100);
+    CGRect fieldFrame = CGRectMake(20, 40, 200, 31);
+    CGRect buttonFrame = CGRectMake(228, 40, 72, 31);
+    
+    
+    // Create and configure the UITable instance
+    self.taskTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
+    self.taskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // Tell the table view which class to instantiate whenever it needs to create a new cell
+    [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+    
+    // Create and configure the UITextField instance where new tasks will be entered
+    self.taskField = [[UITextField alloc] initWithFrame:fieldFrame];
+    self.taskField.borderStyle = UITextBorderStyleRoundedRect;
+    self.taskField.placeholder = @"Type a task, tap insert";
+    
+    
+    // Create and configure the UIButton instance
+    self.insertButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.insertButton.frame = buttonFrame;
+    // Give the button a title
+    [self.insertButton setTitle:@"Insert" forState:UIControlStateNormal];
+    
+    
+    // Add our three UI elements to the window (subviews)
+    [self.window addSubview:self.taskTable];
+    [self.window addSubview:self.taskField];
+    [self.window addSubview:self.insertButton];
+    
+    // Finalize the window and put it on the screen
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    return YES; // this is a BOOL method so it must return YES in this case (BOOls default to NO generally)
+
+    
+    // REPLACED THIS BOILERPLATE CODE WITH THE ABOVE so that I get to build the GUI programatically instead of via the editor //
+    /* self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    return YES;
+    return YES; */
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
