@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZGCAppDelegate : UIResponder <UIApplicationDelegate>
+@interface ZGCAppDelegate : UIResponder <UIApplicationDelegate, UITableViewDataSource> // protocols this delegate conforms to.  dataSource is for tablebiews
 
 #pragma mark - UI properties / objects
 @property (strong, nonatomic) UIWindow *window;
