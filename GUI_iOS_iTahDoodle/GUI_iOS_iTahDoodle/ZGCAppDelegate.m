@@ -44,7 +44,7 @@
     // Tell the table view which class to instantiate whenever it needs to create a new cell
     [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
-    
+    // * WIRING UP THE TABLE VIEW * //
     // Make the ZGCAppDelegate the TableView's datasource (it must conform to the datasource protocol (has two required methods))
     self.taskTable.dataSource = self;
     
@@ -62,7 +62,8 @@
     // Give the button a title
     [self.insertButton setTitle:@"Insert" forState:UIControlStateNormal];
     
-    // * WIRING UP THE BUTTON * - Set the target and action for the insert button //
+    
+    // * WIRING UP THE BUTTON * - Set the target-action callback for the insert button //
     [self.insertButton addTarget:self
                           action:@selector(addTask:)
                 forControlEvents:UIControlEventTouchUpInside];
@@ -163,8 +164,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    // test // not ready for this yet // // adds a delete button with swipe...
-
+    // test // not ready for this yet // // adds a delete button with swipe...  IT WORKS THOUGH!!!
+    NSArray *deleteIndexPaths = [NSArray arrayWithObjects:indexPath, nil];
+    [tableView beginUpdates]; // could also reference this via the actual instance variable 'self.tasktable'
+    [tableView deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationFade];
+    [self.tasks removeObjectAtIndex:indexPath.item];
+    [tableView numberOfRowsInSection:[self.tasks count]]; // update table row count after deletion
+    [tableView endUpdates];
+    [tableView reloadData];
 }
 
 @end
