@@ -8,6 +8,13 @@
 
 #import "ZGCAppDelegate.h"
 
+// Implementing the "C helper function" (outside of the implementation section)
+NSString *ZGCDocPath(){
+    NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); // our function uses the NSSearchPathForDirectoriesInDomain foundation function
+    return [pathList[0] stringByAppendingPathComponent:@"data.td"]; // It returns an NSString
+}
+
+
 @interface ZGCAppDelegate ()
 
 @end
@@ -19,7 +26,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Create an empty array to get us started
-    self.tasks = [NSMutableArray array];
+    // self.tasks = [NSMutableArray array]; <--// switching to approach that considers saved data state
+    
+    // Load an existing dataset or create a new one
+    NSArray *plist = [NSArray arrayWithContentsOfFile:ZGCDocPath()];
+    if (plist) {
+        // We have a dataset; copy it into tasks
+        self.tasks = [plist mutableCopy];
+        NSLog(@"%@", self.tasks); // just outputing to log for logging purposes
+    }else{
+        // There is no dataset; create an empty array
+        self.tasks = [NSMutableArray array];
+    }
     
     
     // Create and configure the UIWindow instance
@@ -38,8 +56,7 @@
     
     // Create and configure the UITableView instance
     self.taskTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
-    self.taskTable.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    self.taskTable.separatorStyle = UITableViewCellSeparatorStyleNone;    
     
     // Tell the table view which class to instantiate whenever it needs to create a new cell
     [self.taskTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
@@ -97,6 +114,11 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    /* this protocol method gets sent by UIApplication to the delegate when app enters background as described above
+        I am using it to save the date  */
+    
+    [self.tasks writeToFile:ZGCDocPath() atomically:YES]; // using our C-helper function to retrieve directory path
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
