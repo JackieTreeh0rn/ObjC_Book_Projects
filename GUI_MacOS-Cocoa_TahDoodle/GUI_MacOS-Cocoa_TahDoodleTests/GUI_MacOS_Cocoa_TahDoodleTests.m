@@ -1,19 +1,19 @@
 //
-//  GUI_MacOS_TahDoodleTests.m
-//  GUI_MacOS_TahDoodleTests
+//  GUI_MacOS_Cocoa_TahDoodleTests.m
+//  GUI_MacOS-Cocoa_TahDoodleTests
 //
-//  Created by EvilKernel on 12/31/14.
-//  Copyright (c) 2014 Zerogravity. All rights reserved.
+//  Created by EvilKernel on 1/2/15.
+//  Copyright (c) 2015 Zerogravity. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 
-@interface GUI_MacOS_TahDoodleTests : XCTestCase
+@interface GUI_MacOS_Cocoa_TahDoodleTests : XCTestCase
 
 @end
 
-@implementation GUI_MacOS_TahDoodleTests
+@implementation GUI_MacOS_Cocoa_TahDoodleTests
 
 - (void)setUp {
     [super setUp];

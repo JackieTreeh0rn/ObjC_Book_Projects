@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GUI_MacOS_TahDoodle.xcscheme</key>
+		<key>GUI_MacOS-Cocoa_TahDoodle.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E2F972CF1A53BCF400BD4EDB</key>
+		<key>E2BBF8C71A57591000BAD0C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2F972E81A53BCF500BD4EDB</key>
+		<key>E2BBF8E01A57591000BAD0C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

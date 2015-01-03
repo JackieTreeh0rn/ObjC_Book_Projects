@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  GUI_MacOS_TahDoodle
+//  GUI_MacOS-Cocoa_TahDoodle
 //
-//  Created by EvilKernel on 12/31/14.
-//  Copyright (c) 2014 Zerogravity. All rights reserved.
+//  Created by EvilKernel on 1/2/15.
+//  Copyright (c) 2015 Zerogravity. All rights reserved.
 //
 
 #import "AppDelegate.h"

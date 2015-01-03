@@ -1,9 +1,9 @@
 //
 //  Document.m
-//  GUI_MacOS_TahDoodle
+//  GUI_MacOS-Cocoa_TahDoodle
 //
-//  Created by EvilKernel on 12/31/14.
-//  Copyright (c) 2014 Zerogravity. All rights reserved.
+//  Created by EvilKernel on 1/2/15.
+//  Copyright (c) 2015 Zerogravity. All rights reserved.
 //
 
 #import "Document.h"
@@ -31,9 +31,10 @@
     return YES;
 }
 
-- (void)makeWindowControllers {
-    // Override to return the Storyboard file name of the document.
-    [self addWindowController:[[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"]];
+- (NSString *)windowNibName {
+    // Override returning the nib file name of the document
+    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
+    return @"Document";
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {

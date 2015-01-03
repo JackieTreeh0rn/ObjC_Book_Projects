@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>666B62D5-7AC3-4533-BB07-F27ADE5BA7E2</string>
+	<string>85066AB9-B9EB-4A52-BA23-42C1CF85CF6F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>GUI_MacOS_TahDoodle</string>
+	<string>GUI_MacOS-Cocoa_TahDoodle</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>154A23A1A619541D1433B8027E3D9F41E698194C</key>
 		<string>https://github.com/fsck66/ObjC_Book_Projects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GUI_MacOS_TahDoodle/GUI_MacOS_TahDoodle.xcodeproj</string>
+	<string>GUI_MacOS-Cocoa_TahDoodle/GUI_MacOS-Cocoa_TahDoodle.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>154A23A1A619541D1433B8027E3D9F41E698194C</key>

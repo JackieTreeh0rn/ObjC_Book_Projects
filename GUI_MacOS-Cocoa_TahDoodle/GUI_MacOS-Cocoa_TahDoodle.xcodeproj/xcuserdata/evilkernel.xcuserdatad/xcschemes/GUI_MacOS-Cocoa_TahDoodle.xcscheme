@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2F972CF1A53BCF400BD4EDB"
-               BuildableName = "GUI_MacOS_TahDoodle.app"
-               BlueprintName = "GUI_MacOS_TahDoodle"
-               ReferencedContainer = "container:GUI_MacOS_TahDoodle.xcodeproj">
+               BlueprintIdentifier = "E2BBF8C71A57591000BAD0C2"
+               BuildableName = "GUI_MacOS-Cocoa_TahDoodle.app"
+               BlueprintName = "GUI_MacOS-Cocoa_TahDoodle"
+               ReferencedContainer = "container:GUI_MacOS-Cocoa_TahDoodle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2F972E81A53BCF500BD4EDB"
-               BuildableName = "GUI_MacOS_TahDoodleTests.xctest"
-               BlueprintName = "GUI_MacOS_TahDoodleTests"
-               ReferencedContainer = "container:GUI_MacOS_TahDoodle.xcodeproj">
+               BlueprintIdentifier = "E2BBF8E01A57591000BAD0C2"
+               BuildableName = "GUI_MacOS-Cocoa_TahDoodleTests.xctest"
+               BlueprintName = "GUI_MacOS-Cocoa_TahDoodleTests"
+               ReferencedContainer = "container:GUI_MacOS-Cocoa_TahDoodle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2F972E81A53BCF500BD4EDB"
-               BuildableName = "GUI_MacOS_TahDoodleTests.xctest"
-               BlueprintName = "GUI_MacOS_TahDoodleTests"
-               ReferencedContainer = "container:GUI_MacOS_TahDoodle.xcodeproj">
+               BlueprintIdentifier = "E2BBF8E01A57591000BAD0C2"
+               BuildableName = "GUI_MacOS-Cocoa_TahDoodleTests.xctest"
+               BlueprintName = "GUI_MacOS-Cocoa_TahDoodleTests"
+               ReferencedContainer = "container:GUI_MacOS-Cocoa_TahDoodle.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2F972CF1A53BCF400BD4EDB"
-            BuildableName = "GUI_MacOS_TahDoodle.app"
-            BlueprintName = "GUI_MacOS_TahDoodle"
-            ReferencedContainer = "container:GUI_MacOS_TahDoodle.xcodeproj">
+            BlueprintIdentifier = "E2BBF8C71A57591000BAD0C2"
+            BuildableName = "GUI_MacOS-Cocoa_TahDoodle.app"
+            BlueprintName = "GUI_MacOS-Cocoa_TahDoodle"
+            ReferencedContainer = "container:GUI_MacOS-Cocoa_TahDoodle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -75,10 +75,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2F972CF1A53BCF400BD4EDB"
-            BuildableName = "GUI_MacOS_TahDoodle.app"
-            BlueprintName = "GUI_MacOS_TahDoodle"
-            ReferencedContainer = "container:GUI_MacOS_TahDoodle.xcodeproj">
+            BlueprintIdentifier = "E2BBF8C71A57591000BAD0C2"
+            BuildableName = "GUI_MacOS-Cocoa_TahDoodle.app"
+            BlueprintName = "GUI_MacOS-Cocoa_TahDoodle"
+            ReferencedContainer = "container:GUI_MacOS-Cocoa_TahDoodle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -93,10 +93,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E2F972CF1A53BCF400BD4EDB"
-            BuildableName = "GUI_MacOS_TahDoodle.app"
-            BlueprintName = "GUI_MacOS_TahDoodle"
-            ReferencedContainer = "container:GUI_MacOS_TahDoodle.xcodeproj">
+            BlueprintIdentifier = "E2BBF8C71A57591000BAD0C2"
+            BuildableName = "GUI_MacOS-Cocoa_TahDoodle.app"
+            BlueprintName = "GUI_MacOS-Cocoa_TahDoodle"
+            ReferencedContainer = "container:GUI_MacOS-Cocoa_TahDoodle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

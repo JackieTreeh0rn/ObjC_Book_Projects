@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GUI_MacOS_TahDoodle.xcodeproj">
+      location = "self:GUI_MacOS-Cocoa_TahDoodle.xcodeproj">
    </FileRef>
 </Workspace>
