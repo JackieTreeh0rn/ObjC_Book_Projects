@@ -106,14 +106,23 @@
     NSLog(@"Add Task Button Clicked!");
 }
 
+// added this method to remove task.
 - (void)removeTask:(id)sender {
     
+    NSLog(@"Delete Task Button Clicked!");
     // If no array, quit
     if (!self.tasks) {
+        NSLog(@"No tasks to delete yet");
         return;
     }
+    NSIndexSet *selectedRows = self.taskTable.selectedRowIndexes;
+    [self.tasks removeObjectsAtIndexes:selectedRows]; // <-- came up with this approach to delete multiple rows at once
+   // [self.tasks removeObjectAtIndex:[self.taskTable selectedRow]]; // using 'selectedRow' property of NSTableView to indicate what to delete
+    [self.taskTable reloadData]; // refresh tableview
     
-    [self.tasks removeObjectAtIndex:]
+    
+    [self updateChangeCount:NSChangeDone];
+    
     
 }
 
