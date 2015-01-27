@@ -25,7 +25,7 @@
 @property (nonatomic) NSDate *lastTime; // Target-action property
 
 // TARGET-ACTION callback methods //
-- (NSString *)lastTimeString; // returns formatted NSDate object (lastTime)
+- (NSString *)lastTimeString; // returns formatted NSDate object (lastTime) - didnt really have to declare this as I am only using it internally.
 - (void)updateLastTime:(NSTimer *)t; // target-action methods always take one argument (the object sending the action - a 'timer' object in this case)
 
 

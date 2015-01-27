@@ -13,7 +13,6 @@
 @interface ZGCOwnedAppliance ()
 {
     NSMutableSet *_ownerNames; // adds mutability to this variable
-    
 }
 
 @end

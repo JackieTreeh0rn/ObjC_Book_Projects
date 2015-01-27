@@ -27,7 +27,10 @@
 - (void)updateLastTime:(NSTimer *)t
 {
     NSDate *now = [NSDate date];
-    [self setLastTime:now];
+    // [self setLastTime:now]; // switching to setting this using actual property to illustrate KVO example in chapter without using accessor (trigger KVO notificaton explicitely)
+    [self willChangeValueForKey:@"lastTime"]; // KVO // this before and after check only needed if not monitoring via the accessor method (monitoring explicit variables instead)
+    _lastTime = now;
+    [self didChangeValueForKey:@"lastTime"]; // KVO // this before and after check only needed if not monitoring via the accessor method (monitoring explicit variables instead)
     NSLog(@"Just set time to %@", self.lastTimeString);
 }
 
@@ -81,6 +84,12 @@
 - (void)zoneChange:(NSNotification *)note
 {
     NSLog(@"Time zone has been changed to %@", [NSTimeZone systemTimeZone]); //pulling local system timzone for this output
+}
+
+
+// KVO // - Class method called by KVO when observing dependent properties, in this case, we are observing @"lastTimeString" in main() which changes when 'lastTime' property changes
++ (NSSet *)keyPathsForValuesAffectingLastTimeString {
+    return [NSSet setWithObject:@"lastTime"];
 }
 
 

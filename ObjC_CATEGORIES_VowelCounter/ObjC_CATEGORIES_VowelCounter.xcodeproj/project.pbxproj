@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E203523F1A76265F0075D783 /* ZGCObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E203523E1A76265F0075D783 /* ZGCObserver.m */; };
-		E2EFD17F1A16E0180046C87C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EFD17E1A16E0180046C87C /* main.m */; };
-		E2EFD1871A16FE3B0046C87C /* ZGCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EFD1861A16FE3B0046C87C /* ZGCLogger.m */; };
+		E203524D1A775FBF0075D783 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E203524C1A775FBF0075D783 /* main.m */; };
+		E20352551A7766E00075D783 /* NSString+ZGCVowelCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = E20352541A7766E00075D783 /* NSString+ZGCVowelCounting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E2EFD1791A16E0180046C87C /* CopyFiles */ = {
+		E20352471A775FBF0075D783 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,16 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E203523D1A76265F0075D783 /* ZGCObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCObserver.h; sourceTree = "<group>"; };
-		E203523E1A76265F0075D783 /* ZGCObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCObserver.m; sourceTree = "<group>"; };
-		E2EFD17B1A16E0180046C87C /* ObjC_Callbacks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjC_Callbacks; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2EFD17E1A16E0180046C87C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E2EFD1851A16FE3B0046C87C /* ZGCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGCLogger.h; sourceTree = "<group>"; };
-		E2EFD1861A16FE3B0046C87C /* ZGCLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGCLogger.m; sourceTree = "<group>"; };
+		E20352491A775FBF0075D783 /* ObjC_CATEGORIES_VowelCounter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjC_CATEGORIES_VowelCounter; sourceTree = BUILT_PRODUCTS_DIR; };
+		E203524C1A775FBF0075D783 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E20352531A7766E00075D783 /* NSString+ZGCVowelCounting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZGCVowelCounting.h"; sourceTree = "<group>"; };
+		E20352541A7766E00075D783 /* NSString+ZGCVowelCounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZGCVowelCounting.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E2EFD1781A16E0180046C87C /* Frameworks */ = {
+		E20352461A775FBF0075D783 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,108 +41,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E2EFD1721A16E0180046C87C = {
+		E20352401A775FBF0075D783 = {
 			isa = PBXGroup;
 			children = (
-				E2EFD17D1A16E0180046C87C /* ObjC_Callbacks */,
-				E2EFD17C1A16E0180046C87C /* Products */,
+				E203524B1A775FBF0075D783 /* ObjC_CATEGORIES_VowelCounter */,
+				E203524A1A775FBF0075D783 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E2EFD17C1A16E0180046C87C /* Products */ = {
+		E203524A1A775FBF0075D783 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E2EFD17B1A16E0180046C87C /* ObjC_Callbacks */,
+				E20352491A775FBF0075D783 /* ObjC_CATEGORIES_VowelCounter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E2EFD17D1A16E0180046C87C /* ObjC_Callbacks */ = {
+		E203524B1A775FBF0075D783 /* ObjC_CATEGORIES_VowelCounter */ = {
 			isa = PBXGroup;
 			children = (
-				E2EFD1881A16FE790046C87C /* Classes */,
-				E2EFD17E1A16E0180046C87C /* main.m */,
+				E203524C1A775FBF0075D783 /* main.m */,
+				E20352531A7766E00075D783 /* NSString+ZGCVowelCounting.h */,
+				E20352541A7766E00075D783 /* NSString+ZGCVowelCounting.m */,
 			);
-			path = ObjC_Callbacks;
-			sourceTree = "<group>";
-		};
-		E2EFD1881A16FE790046C87C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E203523D1A76265F0075D783 /* ZGCObserver.h */,
-				E203523E1A76265F0075D783 /* ZGCObserver.m */,
-				E2EFD1851A16FE3B0046C87C /* ZGCLogger.h */,
-				E2EFD1861A16FE3B0046C87C /* ZGCLogger.m */,
-			);
-			name = Classes;
+			path = ObjC_CATEGORIES_VowelCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E2EFD17A1A16E0180046C87C /* ObjC_Callbacks */ = {
+		E20352481A775FBF0075D783 /* ObjC_CATEGORIES_VowelCounter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2EFD1821A16E0180046C87C /* Build configuration list for PBXNativeTarget "ObjC_Callbacks" */;
+			buildConfigurationList = E20352501A775FBF0075D783 /* Build configuration list for PBXNativeTarget "ObjC_CATEGORIES_VowelCounter" */;
 			buildPhases = (
-				E2EFD1771A16E0180046C87C /* Sources */,
-				E2EFD1781A16E0180046C87C /* Frameworks */,
-				E2EFD1791A16E0180046C87C /* CopyFiles */,
+				E20352451A775FBF0075D783 /* Sources */,
+				E20352461A775FBF0075D783 /* Frameworks */,
+				E20352471A775FBF0075D783 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ObjC_Callbacks;
-			productName = ObjC_Callbacks;
-			productReference = E2EFD17B1A16E0180046C87C /* ObjC_Callbacks */;
+			name = ObjC_CATEGORIES_VowelCounter;
+			productName = ObjC_CATEGORIES_VowelCounter;
+			productReference = E20352491A775FBF0075D783 /* ObjC_CATEGORIES_VowelCounter */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E2EFD1731A16E0180046C87C /* Project object */ = {
+		E20352411A775FBF0075D783 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Zerogravity;
 				TargetAttributes = {
-					E2EFD17A1A16E0180046C87C = {
+					E20352481A775FBF0075D783 = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
-			buildConfigurationList = E2EFD1761A16E0180046C87C /* Build configuration list for PBXProject "ObjC_Callbacks" */;
+			buildConfigurationList = E20352441A775FBF0075D783 /* Build configuration list for PBXProject "ObjC_CATEGORIES_VowelCounter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E2EFD1721A16E0180046C87C;
-			productRefGroup = E2EFD17C1A16E0180046C87C /* Products */;
+			mainGroup = E20352401A775FBF0075D783;
+			productRefGroup = E203524A1A775FBF0075D783 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E2EFD17A1A16E0180046C87C /* ObjC_Callbacks */,
+				E20352481A775FBF0075D783 /* ObjC_CATEGORIES_VowelCounter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E2EFD1771A16E0180046C87C /* Sources */ = {
+		E20352451A775FBF0075D783 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2EFD1871A16FE3B0046C87C /* ZGCLogger.m in Sources */,
-				E203523F1A76265F0075D783 /* ZGCObserver.m in Sources */,
-				E2EFD17F1A16E0180046C87C /* main.m in Sources */,
+				E203524D1A775FBF0075D783 /* main.m in Sources */,
+				E20352551A7766E00075D783 /* NSString+ZGCVowelCounting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E2EFD1801A16E0180046C87C /* Debug */ = {
+		E203524E1A775FBF0075D783 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -185,7 +171,7 @@
 			};
 			name = Debug;
 		};
-		E2EFD1811A16E0180046C87C /* Release */ = {
+		E203524F1A775FBF0075D783 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,14 +205,14 @@
 			};
 			name = Release;
 		};
-		E2EFD1831A16E0180046C87C /* Debug */ = {
+		E20352511A775FBF0075D783 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E2EFD1841A16E0180046C87C /* Release */ = {
+		E20352521A775FBF0075D783 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -236,25 +222,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E2EFD1761A16E0180046C87C /* Build configuration list for PBXProject "ObjC_Callbacks" */ = {
+		E20352441A775FBF0075D783 /* Build configuration list for PBXProject "ObjC_CATEGORIES_VowelCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2EFD1801A16E0180046C87C /* Debug */,
-				E2EFD1811A16E0180046C87C /* Release */,
+				E203524E1A775FBF0075D783 /* Debug */,
+				E203524F1A775FBF0075D783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2EFD1821A16E0180046C87C /* Build configuration list for PBXNativeTarget "ObjC_Callbacks" */ = {
+		E20352501A775FBF0075D783 /* Build configuration list for PBXNativeTarget "ObjC_CATEGORIES_VowelCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2EFD1831A16E0180046C87C /* Debug */,
-				E2EFD1841A16E0180046C87C /* Release */,
+				E20352511A775FBF0075D783 /* Debug */,
+				E20352521A775FBF0075D783 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E2EFD1731A16E0180046C87C /* Project object */;
+	rootObject = E20352411A775FBF0075D783 /* Project object */;
 }

@@ -13,6 +13,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ZGCLogger.h"
+#import "ZGCObserver.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -26,6 +27,15 @@ int main(int argc, const char * argv[]) {
                                                                  selector:@selector(updateLastTime:) // action is the selector (the callback method)
                                                                  userInfo:nil
                                                                   repeats:YES];
+       
+        // KVO Observing Call back//
+        __unused ZGCObserver *observer = [[ZGCObserver alloc] init];
+        // I want to know the new value and the old value whenever lastTime is changed
+        [logger addObserver:observer
+                 forKeyPath:@"lastTimeString"
+                    options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                    context:nil];
+        
         
         /// ++ HELPER OBJECT CALL BACK ++  aka 'delegates/data sources' (using NSURLConnection in this example) ///
         NSURL *url = [NSURL URLWithString:@"http://www.gutenberg.org/cache/epub/205/pg205.txt"];
