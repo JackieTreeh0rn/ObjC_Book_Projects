@@ -12,8 +12,8 @@
 
 - (int)zgc_vowelCount {  // we are adding this category method which counts vowel on a string
     
-    NSCharacterSet *charset = [NSCharacterSet characterSetWithCharactersInString:@"aeiouyAEIOUY"]; // build characterset object to be the vowels
-    NSUInteger count = [self length]; // count to hold length of the receiver/supplied to string to evaluate
+    NSCharacterSet *charset = [NSCharacterSet characterSetWithCharactersInString:@"aeiouyAEIOUY"]; // build characterset object to hold the vowels
+    NSUInteger count = [self length]; // count to hold length of the receiver/supplied string to evaluate
     int sum = 0; // initiate sum count to 0
     for (int i = 0; i < count; i++) { // for-loop, runs for each character on the receiving string, per the count.
         unichar c = [self characterAtIndex:i]; // house the individual character from the receiving string in a variable

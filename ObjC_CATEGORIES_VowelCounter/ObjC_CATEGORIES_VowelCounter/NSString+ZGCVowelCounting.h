@@ -14,6 +14,6 @@
 
 @interface NSString (ZGCVowelCounting)
 
-- (int)zgc_vowelCount;
+- (int)zgc_vowelCount;  // we are using _ in this method name.  this is because any category method overrides same method on parent class. it is safeguard in case class gets updated with a new method by apple.
 
 @end

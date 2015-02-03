@@ -14,11 +14,19 @@
  not share source code for the NSString class but we can use a category ti add new
  methods */
 
+/* Only this program has this category.  If we want this method in another program we must
+ add the category files to the project */
+
+/* ONLY use categories to ADD functionality to existing classes. Use subclassing to replace
+ functionality */
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        NSString *string = @"Hello, World!";
+        NSLog(@"%@ has %d vowels", string, [string zgc_vowelCount]);
+        
     }
     return 0;
 }
