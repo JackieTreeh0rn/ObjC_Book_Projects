@@ -7,6 +7,8 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h> // For malloc/free
+#include <string.h> // for strlen() function
 
 /// CHALLENGE ///
 /* write a program that creates an unsigned 64-bit integer such that
@@ -16,12 +18,16 @@
 
 int main(int argc, const char * argv[]) {
 
-    uint64_t n = 0; //long long int "typedef"
+    uint64_t n = 0; // long long int "typedef"
     for (int i = 0; i < 64; i++) {
         n = n << 2; // using BITWISE LEFT-SHIFT operation
         n++;
+        printf("number is %lld\n", n); // added printf to loop to see operation in action
     }
     
     printf("number is %lld\n", n);
+    
+
+    
     
 }

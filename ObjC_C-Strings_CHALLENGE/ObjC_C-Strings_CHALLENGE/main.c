@@ -19,7 +19,7 @@ int spaceCount(const char *string) {
             sum++;
         }
     }
-    return sum; //return count
+    return sum; // return count
 }
 
 

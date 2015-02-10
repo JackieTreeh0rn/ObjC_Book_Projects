@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h> // malloc(), free()
+#include <string.h> //strlen()
 
 /// C ARRAYS /////
 /* Similar to how a C string is a list of chracters packed one next to the other in memory
@@ -63,7 +64,23 @@ int main(int argc, const char * argv[]) {
     float aver4ge = averageFloats(grad3Book, 3);
     printf("Average = %.2f\n", aver4ge);
     
+
+// SOME EXTRA EXAMPLES FROM FORUM //
+    // Allocate memory for each one
+    const unsigned long N1 = 3;   // three elements
+    const unsigned long N2 = 2;   // two elements
+    float *gradeBook1 = malloc (N1 * sizeof (float));
+    float *gradeBook2 = malloc (N2 * sizeof (float));
+    printf ("gradeBook1 array takes %zu bytes\n", N1 * sizeof (float));
+    printf ("gradeBook2 array takes %zu bytes\n", N2 * sizeof (float));
     
-    
+    // Allocate a compile-time array with three elements
+    const unsigned long N = 3;
+    float gradeBookn [N];
+    printf ("gradeBook array takes %zu bytes\n", sizeof (gradeBookn));
+    printf ("gradeBook array takes %zu bytes\n", N * sizeof (float)); // notice result when using arrays computes value for entire array, not just size of a float in this case
+  
+
+  
     return 0;
 }

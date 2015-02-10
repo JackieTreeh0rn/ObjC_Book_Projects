@@ -143,10 +143,9 @@ strlen() is a function that will count the number of chracters in a string.  */
     
     // C-String from NSString - trickier 'cause NSString can handle some characters certain encoding cannot. check first like so
     /* note: you do not own the resulting C-string; the system will eventually free it for you, you are guaranteed that it will
-     live at last as long as the current autorelease pool.  If you are going to need the C string to live for a long time
-     put it into a buffer you have created with malloc() */
+     live at last as long as the current autorelease pool.  If you are going to need the C string to live for a long time, put it into a buffer you have created with malloc() */
     NSString *greeting = "Hello!";
-    const char *x = NULL; // not buffered variable, like above w/malloc()
+    char *x = NULL; // not buffered variable, like above w/malloc()
     if ([greeting canBeConvertedToEncoding:NSUTF8StringEncoding]) {
         x = [greeting cStringUsingEncoding:NSUTF8StringEncoding];
     }
