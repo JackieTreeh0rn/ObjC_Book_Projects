@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSData+Speakable.h"
+#import "NSData+Speakable_3.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

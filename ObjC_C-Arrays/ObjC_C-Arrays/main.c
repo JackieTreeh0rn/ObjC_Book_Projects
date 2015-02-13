@@ -77,8 +77,8 @@ int main(int argc, const char * argv[]) {
     // Allocate a compile-time array with three elements
     const unsigned long N = 3;
     float gradeBookn [N];
-    printf ("gradeBook array takes %zu bytes\n", sizeof (gradeBookn));
-    printf ("gradeBook array takes %zu bytes\n", N * sizeof (float)); // notice result when using arrays computes value for entire array, not just size of a float in this case
+    printf ("gradeBook array takes %zu bytes\n", N * sizeof (float));
+    printf ("gradeBook array takes %zu bytes\n", sizeof (gradeBookn)); // notice result when using arrays computes value for entire array, not just size of a float in this case
   
 
   

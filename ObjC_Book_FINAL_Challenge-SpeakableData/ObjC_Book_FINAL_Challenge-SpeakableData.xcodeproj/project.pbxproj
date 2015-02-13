@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E276527A1A8D8F3400698972 /* NSData+Speakable_2.m in Sources */ = {isa = PBXBuildFile; fileRef = E27652791A8D8F3400698972 /* NSData+Speakable_2.m */; };
+		E276527D1A8D919300698972 /* NSData+Speakable_3.m in Sources */ = {isa = PBXBuildFile; fileRef = E276527C1A8D919300698972 /* NSData+Speakable_3.m */; };
+		E27652801A8D927F00698972 /* NSData+Speakable_4.m in Sources */ = {isa = PBXBuildFile; fileRef = E276527F1A8D927F00698972 /* NSData+Speakable_4.m */; };
 		E2F944541A84749E00E3B125 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F944531A84749E00E3B125 /* main.m */; };
 		E2F9445C1A8476DC00E3B125 /* NSData+Speakable.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F9445B1A8476DC00E3B125 /* NSData+Speakable.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E27652781A8D8F3400698972 /* NSData+Speakable_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Speakable_2.h"; sourceTree = "<group>"; };
+		E27652791A8D8F3400698972 /* NSData+Speakable_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Speakable_2.m"; sourceTree = "<group>"; };
+		E276527B1A8D919300698972 /* NSData+Speakable_3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Speakable_3.h"; sourceTree = "<group>"; };
+		E276527C1A8D919300698972 /* NSData+Speakable_3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Speakable_3.m"; sourceTree = "<group>"; };
+		E276527E1A8D927F00698972 /* NSData+Speakable_4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Speakable_4.h"; sourceTree = "<group>"; };
+		E276527F1A8D927F00698972 /* NSData+Speakable_4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Speakable_4.m"; sourceTree = "<group>"; };
 		E2F944501A84749E00E3B125 /* ObjC_Book_FINAL_Challenge-SpeakableData */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ObjC_Book_FINAL_Challenge-SpeakableData"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F944531A84749E00E3B125 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2F9445A1A8476DC00E3B125 /* NSData+Speakable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Speakable.h"; sourceTree = "<group>"; };
@@ -63,6 +72,12 @@
 				E2F944531A84749E00E3B125 /* main.m */,
 				E2F9445A1A8476DC00E3B125 /* NSData+Speakable.h */,
 				E2F9445B1A8476DC00E3B125 /* NSData+Speakable.m */,
+				E27652781A8D8F3400698972 /* NSData+Speakable_2.h */,
+				E27652791A8D8F3400698972 /* NSData+Speakable_2.m */,
+				E276527B1A8D919300698972 /* NSData+Speakable_3.h */,
+				E276527C1A8D919300698972 /* NSData+Speakable_3.m */,
+				E276527E1A8D927F00698972 /* NSData+Speakable_4.h */,
+				E276527F1A8D927F00698972 /* NSData+Speakable_4.m */,
 			);
 			path = "ObjC_Book_FINAL_Challenge-SpeakableData";
 			sourceTree = "<group>";
@@ -124,7 +139,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2F944541A84749E00E3B125 /* main.m in Sources */,
+				E276527A1A8D8F3400698972 /* NSData+Speakable_2.m in Sources */,
 				E2F9445C1A8476DC00E3B125 /* NSData+Speakable.m in Sources */,
+				E27652801A8D927F00698972 /* NSData+Speakable_4.m in Sources */,
+				E276527D1A8D919300698972 /* NSData+Speakable_3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +256,7 @@
 				E2F944591A84749E00E3B125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

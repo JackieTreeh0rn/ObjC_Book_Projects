@@ -253,6 +253,7 @@
 				E297A1C419CD4DC900DE002D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
