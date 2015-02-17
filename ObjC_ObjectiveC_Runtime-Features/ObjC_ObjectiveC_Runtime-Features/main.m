@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h> //needted to access runtime functions directly
+#import <objc/message.h> // needed for objc_msgsend()
 
 // C Helper function to build an array that holds list of class and superclasses, building a hierchy.
 NSArray *ZGCHierarchyForClass(Class cls) {
@@ -33,11 +34,12 @@ NSArray *ZGCMethodsForClass(Class cls) {
         SEL methodSelector = method_getName(currentMethod);
         //add its strings representation to the array
         [methodArray addObject:NSStringFromSelector(methodSelector)];
+        free(methodList); // create-copy rule, must free these types of functions
     }
     return methodArray; // return method array
 }
 
-// C Helper Funtion to list instance variables for each clas
+// C Helper Funtion to list instance variables for each class
 NSArray *ZGCiVarsForClass(Class cls) {
     NSMutableArray *iVars = [NSMutableArray array];
     unsigned int ivarCount = 0;
@@ -51,6 +53,7 @@ NSArray *ZGCiVarsForClass(Class cls) {
         
         // add resulting NSString object to iVar array
         [iVars addObject:iVarName];
+        free(iVarList); // create-copy rule, must free these types of functions
         
     }
     return iVars; // return ivar array
@@ -60,6 +63,17 @@ NSArray *ZGCiVarsForClass(Class cls) {
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        // DYNAMIC METHOD LOOKUP and EXECUTION AT RUNTIME //
+        // objC uses the objc_msgSend() function to  looksup and executes the methods sent.  AT Runtime...
+        // its arguments are receiver, selector (the method), and any arguments fo the method
+        // it kicks off a search starting with the class referenced ISA pointer and up the inheretance chain.
+        // exmaple with the NSSTring upperCaseString method
+        NSString *nameString = @"Mikey Ward";
+        NSString *capsString = objc_msgSend(nameString, @selector(uppercaseString)); // this is what the compiler replaces the calls with
+        NSLog(@"%@ --> %@", nameString, capsString);
+        
+        
+        // MANAGEMENT OF CLASSES and INHERENTANCE HIERACHIES //
         // Create an aray of dictionaries, where each ditionary will hold the classname,
         // hierrarchy, and method list for a given class
         NSMutableArray *runtimeClassesInfo = [NSMutableArray array];
@@ -92,6 +106,7 @@ int main(int argc, const char * argv[]) {
                                             @"methods" : methods,
                                             @"iVariables" : variables };
             
+            
             [runtimeClassesInfo addObject:classInfoDict];
             
             
@@ -101,7 +116,7 @@ int main(int argc, const char * argv[]) {
         free(classList); // this is the copy and create rule in objective C. any function that uses 'copy or 'create',like the one we used "objc_copyClassList()", needs freeing
         
         // Sort the ckasses ubfi arrat alphabetically by name
-        NSSortDescriptor *alphaAsc = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+        NSSortDescriptor *alphaAsc = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]; // should be classname for key I think.
         NSArray *sortedArray = [runtimeClassesInfo sortedArrayUsingDescriptors:@[alphaAsc]];
         NSLog(@"There  are %ld classses registered with this program's Runtime", sortedArray.count);
         NSLog(@"%@", sortedArray);

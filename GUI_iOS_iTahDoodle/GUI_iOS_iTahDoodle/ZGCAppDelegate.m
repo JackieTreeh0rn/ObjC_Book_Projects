@@ -9,7 +9,7 @@
 #import "ZGCAppDelegate.h"
 
 // Implementing the "C helper function" (outside of the implementation section)
-NSString *ZGCDocPath(){
+NSString *ZGCDocPath() {
     NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); // our function uses the NSSearchPathForDirectoriesInDomain foundation function
     return [pathList[0] stringByAppendingPathComponent:@"data.td"]; // It returns an NSString
 }
@@ -185,8 +185,9 @@ NSString *ZGCDocPath(){
     
 }
 
+// protocol method for when user deletes/adds content to tableview
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    // test // not ready for this yet // // adds a delete button with swipe...  IT WORKS THOUGH!!!
+    // test // not ready for this yet // // adds a delete button with swipe...  -IT WORKS THOUGH!!!-
     NSArray *deleteIndexPaths = [NSArray arrayWithObjects:indexPath, nil];
     [tableView beginUpdates]; // could also reference this via the actual instance variable 'self.tasktable'
     [tableView deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationFade];
