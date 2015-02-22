@@ -14,6 +14,6 @@
     initiliazed to midnight on the passed-in day */
 
 + (NSDate *)zgc_dateByIntYear:(int)yy month:(int)mm day:(int)dd;  // CLASS method
-- (NSString *)zgc_dateFormatter; // instance method
+- (NSString *)zgc_dateFormatter; // instance method (added this myself to format the date)
 
 @end
