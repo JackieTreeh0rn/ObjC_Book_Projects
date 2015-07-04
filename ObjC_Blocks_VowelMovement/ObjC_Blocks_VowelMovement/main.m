@@ -62,6 +62,7 @@ int main(int argc, const char * argv[]) {
             [devowelizedStrings addObject:newString]; // add new (devowelized string) to the Mutable array
         }; // End of Block assigment
         
+        
         // Iterate over the array with the BLOCK
         [originalStrings enumerateObjectsUsingBlock:devowelizer]; // pass the block we composed. it will get executed once per object in the 'originalStrings' array
         NSLog(@"Devowelized Strings: %@", devowelizedStrings); // output devowelized array
